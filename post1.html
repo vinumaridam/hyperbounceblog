@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Página Inicial</title>
+    <script>
+        function searchPosts() {
+            var input = document.getElementById("searchBar").value.toLowerCase();
+            var items = document.querySelectorAll("#postList li");
+            items.forEach(item => {
+                item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo ao Blog!</h1>
+    <input type="text" id="searchBar" placeholder="Pesquisar..." onkeyup="searchPosts()">
+    <ul id="postList">
+        <li><a href="post1.html">Realidade vs. Razão: A teoria do paradigma indecifrável</a></li>
+        <!-- Você pode adicionar mais posts aqui, como: -->
+        <!-- <li><a href="post2.html">Título do Post 2</a></li> -->
+        <!-- <li><a href="post3.html">Título do Post 3</a></li> -->
+    </ul>
+</body>
+</html>
