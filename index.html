@@ -1,53 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<input type="text" id="searchBar" placeholder="Pesquisar..." onkeyup="searchPosts()">
-<ul id="postList">
-  <li>Post 1</li>
-  <li>Post 2</li>
-  <li>Post 3</li>
-</ul>
-<script>
-  function searchPosts() {
-    var input = document.getElementById("searchBar").value.toLowerCase();
-    var items = document.querySelectorAll("#postList li");
-    items.forEach(item => {
-      item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
-    });
-  }
-</script>
-    <link rel="icon" type="image/png"https://imgur.com/a/tcqXGJO">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Open Graph (Facebook, WhatsApp) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Realidade vs. Razão: A teoria do paradigma indecifrável">
-    <meta property="og:description" content="Apenas o começo.">
-    <meta property="og:image" content="https://i.imgur.com/bycys2O.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://drive.google.com/file/d/1PTRgz7o6PrBT_JMC7iCd9wOn-6OZM9RY/preview">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Realidade vs. Razão: A teoria do paradigma indecifrável">
-    <meta name="twitter:description" content="Realidade vs. Razão: A teoria do paradigma indecifrável.">
-    <meta name="twitter:image" content="https://i.imgur.com/bycys2O.jpeg">
-
-    <title>Realidade vs. Razão: A teoria do paradigma indecifrável</title>
+    <title>Blog - Página Inicial</title>
+    <script>
+        function searchPosts() {
+            var input = document.getElementById("searchBar").value.toLowerCase();
+            var items = document.querySelectorAll("#postList li");
+            items.forEach(item => {
+                item.style.display = item.innerText.toLowerCase().includes(input) ? "" : "none";
+            });
+        }
+    </script>
 </head>
 <body>
-    <h1>Realidade vs. Razão: A teoria do paradigma indecifrável</h1>
-    <a href="https://drive.google.com/file/d/1PTRgz7o6PrBT_JMC7iCd9wOn-6OZM9RY/preview" target="_blank">
-        <img src="https://i.imgur.com/bycys2O.jpeg" width="600" alt="Capa do PDF">
-    </a>
-
-    <h2>Sobre o PDF</h2>
-    <p>Realidade vs. Razão: A teoria do paradigma indecifrável.
-    <br>
-        <br>
-    Apenas o começo.</p>
+    <h1>Bem-vindo ao Blog!</h1>
+    <input type="text" id="searchBar" placeholder="Pesquisar..." onkeyup="searchPosts()">
+    <ul id="postList">
+        <li><a href="post1.html">Realidade vs. Razão: A teoria do paradigma indecifrável</a></li>
+        <!-- Você pode adicionar mais posts aqui, como: -->
+        <!-- <li><a href="post2.html">Título do Post 2</a></li> -->
+        <!-- <li><a href="post3.html">Título do Post 3</a></li> -->
+    </ul>
 </body>
 </html>
